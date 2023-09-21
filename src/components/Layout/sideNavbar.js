@@ -1,9 +1,11 @@
 import styles from './sideNavbar.module.scss';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import { navButtons } from '../../assest/navButton';
+import { useNavigate } from "react-router-dom";
 
 function PageTemplate(props) {
-  return (
+     const navigate = useNavigate();
+     return (
      <>
           <div className={styles.statusBar}>
                <div className={styles.statusInfo}>
@@ -19,19 +21,19 @@ function PageTemplate(props) {
           </div>
           <div className={styles.navBar}>
                <div className={styles.navButton}> 
-                    <div> <img src="./assets/img/home.png" /> </div> Home 
+                    <div onClick={()=>{navigate('/', { replace: true });}}> <img src="./assets/img/home.png" /> </div> Home 
                     <div className={styles.subtract}> <img src="./assets/img/subtract.png" /> </div>
                </div>
                <div className={styles.navButton}> 
-                    <div> <img src="./assets/img/buy.png" /> </div> Buy 
+                    <div onClick={()=>{navigate('/buy', { replace: true });}}> <img src="./assets/img/buy.png" /> </div> Buy 
                     <div className={styles.subtract}> <img src="./assets/img/subtract.png" /> </div>
                </div>
                <div className={styles.navButton}> 
-                    <div> <img src="./assets/img/interface.png" /> </div> Profile 
+                    <div onClick={()=>{navigate('/profile', { replace: true });}}> <img src="./assets/img/interface.png" /> </div> Profile 
                     <div className={styles.subtract}> <img src="./assets/img/subtract.png" /> </div>
                </div>
                <div className={styles.navButton}> 
-                    <div> <img src="./assets/img/contact.png" /> </div> Join Us! 
+                    <div onClick={()=>{navigate('/contact', { replace: true });}}> <img src="./assets/img/contact.png" /> </div> Join Us! 
                     <div className={styles.subtract}> <img src="./assets/img/subtract.png" /> </div>
                </div>
           </div>

@@ -9,8 +9,8 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 function App() {
   return (
     <div className="app">    
-      <PageTemplate />
       <Router>
+      <PageTemplate />
         <Routes>
           <Route exact path="/" element={<Landing></Landing>}></Route>
           <Route exact path="/buy" element={<Buy></Buy>}></Route>
