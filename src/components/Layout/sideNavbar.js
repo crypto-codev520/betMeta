@@ -2,6 +2,7 @@ import styles from './sideNavbar.module.scss';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import { navButtons } from '../../assest/navButton';
 import { useNavigate } from "react-router-dom";
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 function PageTemplate(props) {
      const navigate = useNavigate();
@@ -16,7 +17,7 @@ function PageTemplate(props) {
                     </div>
                </div>
                <div className={styles.statusInfo}>
-                    <div> wallet connect  </div>
+                    <div> <ConnectButton />  </div>
                </div>
           </div>
           <div className={styles.navBar}>
